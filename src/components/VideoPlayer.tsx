@@ -10,17 +10,26 @@ interface VideoPlayerProps {
     isPreload?: boolean;
 }
 
-const VideoPlayer: React.FC<VideoPlayerProps> = ({ url, isPlaying, onEnded, onProgress, videoPlayerRef, isPreload = false }) => {
+const VideoPlayer: React.FC<VideoPlayerProps> = ({
+                                                     url,
+                                                     isPlaying,
+                                                     onEnded,
+                                                     onProgress,
+                                                     videoPlayerRef,
+                                                     isPreload = false
+                                                 }) => {
     return (
-        <ReactPlayer
-            ref={videoPlayerRef}
-            url={url}
-            playing={isPlaying}
-            controls={false}
-            onEnded={onEnded}
-            onProgress={onProgress}
-            style={isPreload ? { display: 'none' } : {}}
-        />
+        <div className="flex justify-center items-center bg-gray-800">
+            <ReactPlayer
+                ref={videoPlayerRef}
+                url={url}
+                playing={isPlaying}
+                controls={false}
+                onEnded={onEnded}
+                onProgress={onProgress}
+                style={isPreload ? {display: 'none'} : {}}
+            />
+        </div>
     );
 };
 
