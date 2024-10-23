@@ -3,10 +3,10 @@
 exports[`VideoPlayerControls should match the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="w-full flex items-center justify-between mt-4"
+    class="flex justify-between items-center p-4"
   >
     <div
-      class="text-sm"
+      class="text-sm text-gray-600"
     >
       00:00:00
     </div>
@@ -27,7 +27,7 @@ exports[`VideoPlayerControls should match the snapshot 1`] = `
       />
     </div>
     <div
-      class="text-sm"
+      class="text-sm text-gray-600"
     >
       00:01:40
     </div>
