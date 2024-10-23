@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VideoPlayerControls should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full flex items-center justify-between mt-4"
+  >
+    <div
+      class="text-sm"
+    >
+      00:00:00
+    </div>
+    <div
+      class="flex items-center w-4/5 mx-4"
+    >
+      <button
+        class="bg-blue-500 text-white px-4 py-2 rounded mr-4"
+      >
+        Play
+      </button>
+      <input
+        class="flex-grow"
+        max="0"
+        min="0"
+        type="range"
+        value="0"
+      />
+    </div>
+    <div
+      class="text-sm"
+    >
+      00:00:00
+    </div>
+  </div>
+</DocumentFragment>
+`;
