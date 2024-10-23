@@ -1,22 +1,26 @@
 
 # Smarter AI Video Player
 
-This project is a customizable video player built using modern web technologies like **React (TypeScript)**, **Tailwind CSS**, and **Vite**. It leverages hooks, utility functions, and a component-based architecture to ensure scalability, maintainability, and ease of use.
+A modern, customizable video player built using **React (TypeScript)**, **Tailwind CSS**, and **Vite**.
+Designed with scalability and maintainability in mind, it leverages React hooks, component-based architecture, and utility functions.
+
+---
 
 ## Table of Contents
-
 - [Installation](#installation)
 - [Features](#features)
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Scripts](#scripts)
+- [Testing](#testing)
 - [Configuration](#configuration)
+
 
 ---
 
 ## Installation
 
-Ensure you have **Node.js** installed. Then follow these steps:
+Make sure you have **Node.js** installed. Then follow these steps:
 
 ```bash
 # Clone the repository
@@ -33,12 +37,12 @@ npm install
 
 ## Features
 
-- **React with TypeScript:** Strongly typed components for reliability.
-- **Vite:** Lightning-fast development environment.
-- **Tailwind CSS:** Utility-first CSS for rapid UI development.
-- **PostCSS:** Custom CSS processing.
-- **ESLint:** Linting configuration to ensure code quality.
-- Modularized code with hooks, types, and utils for better maintainability.
+- **React with TypeScript:** Typed components for reliability.
+- **Vite:** Fast development with hot reloading.
+- **Tailwind CSS:** Utility-first CSS framework.
+- **PostCSS:** Custom CSS processing pipeline.
+- **Jest Testing:** Unit and snapshot tests.
+- **ESLint:** Enforce consistent code style and quality.
 
 ---
 
@@ -47,45 +51,57 @@ npm install
 ```plaintext
 smarter-ai-video-player/
 │
-├── public/                # Static assets (e.g., images, favicon)
+├── public/                  # Static assets (e.g., images, favicon)
 ├── src/
-│   ├── data/              # Data files or constants
-│   ├── hooks/             # Custom React hooks
-│   ├── types/             # TypeScript type definitions
-│   ├── utils/             # Utility functions
-│   ├── App.tsx            # Main React component
-│   ├── main.tsx           # Entry point for the React app
-│   ├── App.css            # Component-specific styles
-│   └── index.css          # Global styles
+│   ├── __tests__/           # Unit and snapshot tests
+│   │   └── __snapshots__/   # Snapshot files
+│   │   └── VideoPlayerControls.test.tsx
+│   ├── components/          # UI Components
+│   │   ├── PreloadVideoPlayer.tsx
+│   │   ├── VideoPlayer.tsx
+│   │   └── VideoPlayerControls.tsx
+│   ├── data/                # Static data files
+│   ├── hooks/               # Custom hooks
+│   ├── types/               # Type definitions
+│   ├── utils/               # Utility functions
+│   ├── App.tsx              # Main component
+│   ├── main.tsx             # Application entry point
+│   ├── App.css              # Component styles
+│   └── index.css            # Global styles
 │
-├── index.html             # Main HTML template
-├── package.json           # Project metadata and dependencies
-├── postcss.config.js      # PostCSS configuration
-├── tailwind.config.js     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-├── vite.config.ts         # Vite configuration
-└── eslint.config.js       # ESLint configuration
+├── index.html               # HTML template
+├── jest.config.cjs          # Jest configuration
+├── tailwind.config.js       # Tailwind CSS configuration
+├── tsconfig.json            # TypeScript configuration
+├── vite.config.ts           # Vite configuration
+├── eslint.config.js         # ESLint configuration
+├── package.json             # Project metadata and dependencies
+└── README.md                # Project documentation
 ```
 
 ---
 
 ## Usage
 
-After installing dependencies, you can start the development server with:
+### Development
+
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
-Open your browser at [http://localhost:5173](http://localhost:5173) to view the project.
+The app will be available at [http://localhost:5173](http://localhost:5173).
 
-To build the project for production, run:
+### Build for Production
+
+Build the project:
 
 ```bash
 npm run build
 ```
 
-And to preview the production build:
+Preview the production build:
 
 ```bash
 npm run preview
@@ -95,18 +111,41 @@ npm run preview
 
 ## Scripts
 
-- **`npm run dev`** - Start the development server.
-- **`npm run build`** - Build the project for production.
-- **`npm run preview`** - Preview the production build.
-- **`npm run lint`** - Lint the code with ESLint.
+- **`npm run dev`**: Start the development server.
+- **`npm run build`**: Build for production.
+- **`npm run preview`**: Preview the production build.
+- **`npm run lint`**: Run ESLint to check code style.
+- **`npm test`**: Run tests using Jest.
+
+---
+
+## Testing
+
+This project uses **Jest** for unit and snapshot testing.
+
+### Running Tests
+
+```bash
+npm test
+```
+
+### Snapshot Testing
+
+If changes are made to the components, you may need to update snapshots:
+
+```bash
+jest --updateSnapshot
+```
+
 
 ---
 
 ## Configuration
 
-- **Vite:** The configuration for Vite is available in `vite.config.ts`.
-- **Tailwind CSS:** Adjust the Tailwind configuration in `tailwind.config.js`.
-- **TypeScript:** Modify the TypeScript settings in `tsconfig.json`.
+- **Vite:** `vite.config.ts` controls the development server and build process.
+- **Tailwind CSS:** Configure styles with `tailwind.config.js`.
+- **TypeScript:** Adjust type settings in `tsconfig.json`.
+- **Jest:** Configure testing in `jest.config.cjs`.
 
 ---
 
@@ -116,3 +155,6 @@ npm run preview
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+
+---
